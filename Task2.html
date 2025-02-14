@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide</title>
+    <!-- Create a webpage with a paragraph and a button
+     to toggle its visibility.Place a button labeled "Show/Hide Text". -->
+    <style>
+        /* #ptag {
+            display: block;
+            color: brown;
+            background-color: aquamarine;
+        } */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Styling for the Paragraph */
+        #ptag {
+            display: block;
+            color: brown;
+            background-color: aquamarine;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling for the Button */
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+    <script>
+        function changeVisibility() {
+            let p = document.getElementById('ptag');
+            if (p.style.display === 'none') {
+                p.style.display = 'block';
+                document.getElementById('btn').innerText = "Hide";
+            } else {
+                p.style.display = 'none';
+                document.getElementById('btn').innerText = "Show";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p id="ptag">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quam voluptas nostrum, quia cupiditate
+        nobis
+        veritatis tempora laborum temporibus, eveniet laboriosam nemo soluta perferendis odit quod harum ipsum corrupti
+        adipisci.</p>
+    <button id="btn" onclick="changeVisibility()">Hide</button>
+</body>
+
+
+</html>
